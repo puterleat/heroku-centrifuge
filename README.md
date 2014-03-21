@@ -25,13 +25,6 @@ Start with provisioning dev service plans:
 
 ```
 heroku addons:add rediscloud:25
-heroku addons:add heroku-postgresql:hobby-dev
-```
-
-Promote created Postgres Database to default db:
-
-```
-heroku pg:promote HEROKU_POSTGRESQL_*_URL
 ```
 
 Enable [websockets support](https://devcenter.heroku.com/articles/heroku-labs-websockets):
@@ -42,8 +35,7 @@ heroku labs:enable websockets
 
 ## Configure centrifuge
 
-Update `Procfile` and specify Redis connection settings or use ``--base``
-option for single-instance deployment.
+Update `Procfile` if you want non-single instance deployment.
 
 You can look up RedisCloud host, port and password (skip username)
 using ``heroku config`` command.
@@ -54,22 +46,7 @@ Do the same for ``centrifuge.json`` and amend the file:
 {
     "password": "password",
     "cookie_secret": "secret",
-    "api_secret": "secret",
-    "structure": {
-        "storage": "centrifuge.structure.postgresql.Storage",
-        "update_interval": 60,
-        "settings": {
-            "url": "$DATABASE_URL"
-        }
-    },
-    "state": {
-        "storage": "centrifuge.state.redis.State",
-        "settings": {
-            "host": "<redis host>",
-            "port": <redis port>,
-            "password": "<redis password>"
-        }
-    }
+    "api_secret": "secret"
 }
 ```
 

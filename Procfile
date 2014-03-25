@@ -1,1 +1,1 @@
-web: centrifuge --config=centrifuge.json --port=$PORT --path=/tmp/centrifuge.db
+web: CENTRIFUGE_STORAGE=centrifuge_postgresql.STORAGE centrifuge --config=centrifuge.json --port=$PORT --url=$DATABASE_URL

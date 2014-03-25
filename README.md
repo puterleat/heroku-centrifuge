@@ -25,6 +25,13 @@ Start with provisioning dev service plans:
 
 ```
 heroku addons:add rediscloud:25
+heroku addons:add heroku-postgresql:hobby-dev
+```
+
+Promote created Postgres Database to default db:
+
+```
+heroku pg:promote HEROKU_POSTGRESQL_*_URL
 ```
 
 Enable [websockets support](https://devcenter.heroku.com/articles/heroku-labs-websockets):

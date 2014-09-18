@@ -41,12 +41,6 @@ If you want to use Redis engine add Redis:
 heroku addons:add redistogo
 ```
 
-Enable [websockets support](https://devcenter.heroku.com/articles/heroku-labs-websockets):
-
-```
-heroku labs:enable websockets
-```
-
 ## Configure centrifuge
 
 Update `Procfile` if you want non-single instance deployment.
@@ -76,11 +70,6 @@ heroku logs --tail
 Go to *app-name.herokuapp.com* and configure project settings as
 described in
 [centrifuge.readthedocs.org](https://centrifuge.readthedocs.org/en/latest/content/web_interface.html)
-
-
-## License
-
-django-herokuify is released into the Public Domain.
 
 
 ## Contribute

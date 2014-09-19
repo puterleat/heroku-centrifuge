@@ -8,7 +8,7 @@ Centrifuge is an Open Source real-time messaging backend similar to
 [Pusher](http://pusher.com/), [Pubnub](http://www.pubnub.com/) or [Faye](http://faye.jcoglan.com/).
 
 The end result will look like
-[centrifuge.herokuapp.com](https://centrifuge.herokuapp.com/) (admin password: ``password``).
+[habrifuge.herokuapp.com](https://habrifuge.herokuapp.com/) (admin password: ``habrahabr``).
 
 
 ## Create Heroku app
